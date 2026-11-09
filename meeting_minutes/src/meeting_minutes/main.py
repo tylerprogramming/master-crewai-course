@@ -46,8 +46,10 @@ class MeetingMinutesFlow(Flow[MeetingMinutesState]):
             chunk.export(chunk_path, format="wav")
             
             with open(chunk_path, "rb") as audio_file:
+                # whisper-1 is removed from the API on 2027-02-26; gpt-transcribe is the
+                # replacement (https://developers.openai.com/api/docs/deprecations).
                 transcription = client.audio.transcriptions.create(
-                    model="whisper-1", 
+                    model="gpt-transcribe",
                     file=audio_file
                 )
                 full_transcription += transcription.text + " "

@@ -23,6 +23,8 @@ crewai install
 
 **Add your `OPENAI_API_KEY` into the `.env` file**
 
+The flow transcribes `src/meeting_minutes/EarningsCall.wav` in one-minute chunks with OpenAI `gpt-transcribe` ($0.0045/min). It used `whisper-1`, which OpenAI removes from the API on 2027-02-26 ([deprecations](https://developers.openai.com/api/docs/deprecations)).
+
 - Modify `src/meeting_minutes/config/agents.yaml` to define your agents
 - Modify `src/meeting_minutes/config/tasks.yaml` to define your tasks
 - Modify `src/meeting_minutes/crew.py` to add your own logic, tools and specific args
