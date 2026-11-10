@@ -6,6 +6,9 @@ authors = [{ name = "Your Name", email = "you@example.com" }]
 requires-python = ">=3.10,<=3.13"
 dependencies = [
     "crewai[tools]>=0.79.4,<1.0.0",
+    # main.py calls agentops.init() and reads the returned session, and the
+    # Gmail tool uses @record_tool; agentops 0.4 removed both behaviours.
+    "agentops>=0.3.17,<0.4",
 ]
 
 [project.scripts]
