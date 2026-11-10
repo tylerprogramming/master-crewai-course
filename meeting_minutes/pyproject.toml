@@ -6,6 +6,17 @@ authors = [{ name = "Your Name", email = "you@example.com" }]
 requires-python = ">=3.10,<=3.13"
 dependencies = [
     "crewai[tools]>=0.79.4,<1.0.0",
+    # main.py calls agentops.init() and reads the returned session, and the
+    # Gmail tool uses @record_tool; agentops 0.4 removed both behaviours.
+    "agentops>=0.3.17,<0.4",
+    # transcription chunks the WAV with pydub; Python 3.13 removed the
+    # stdlib audioop module pydub imports, audioop-lts restores it.
+    "pydub>=0.25.1",
+    "audioop-lts; python_version >= '3.13'",
+    # Gmail draft tool (crews/gmailcrew/tools/gmail_utility.py)
+    "google-api-python-client>=2.100,<3",
+    "google-auth-oauthlib>=1.0,<2",
+    "markdown>=3.5",
 ]
 
 [project.scripts]
