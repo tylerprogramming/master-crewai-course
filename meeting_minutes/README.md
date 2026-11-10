@@ -19,6 +19,8 @@ Next, navigate to your project directory and install the dependencies:
 crewai install
 ```
 
+`pyproject.toml` lists everything the flow imports beyond crewAI: `agentops` (capped below 0.4, because `kickoff()` uses the 0.3 session API and `@record_tool`), `pydub` for chunking the audio (plus `audioop-lts` on Python 3.13), and the Google client libraries and `markdown` for the Gmail draft tool. The Gmail tool expects an OAuth client file at `src/meeting_minutes/crews/gmailcrew/tools/credentials.json`, and the `.env` needs `AGENTOPS_API_KEY`, `GMAIL_SENDER` and `GMAIL_RECIPIENT`.
+
 ### Customizing
 
 **Add your `OPENAI_API_KEY` into the `.env` file**
