@@ -154,7 +154,7 @@ pluggy==1.5.0
 portalocker==2.10.1
 posthog==3.7.0
 prompt_toolkit==3.0.48
-propcache==0.2.0
+propcache==0.5.4
 proto-plus==1.25.0
 protobuf==5.28.3
 psutil==5.9.8
