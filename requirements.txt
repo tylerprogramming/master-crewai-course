@@ -239,5 +239,5 @@ whisper==1.1.10
 wrapt==1.16.0
 wsproto==1.2.0
 yarl==1.25.1
-yt-dlp==2024.11.18
+yt-dlp==2026.10.21
 zipp==3.21.0
