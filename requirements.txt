@@ -86,7 +86,7 @@ itsdangerous==2.2.0
 jedi==0.19.2
 Jinja2==3.1.4
 jiter==0.5.0
-json_repair==0.30.1
+json_repair==0.64.9
 jsonpatch==1.33
 jsonpickle==3.4.2
 jsonpointer==3.0.0
@@ -156,7 +156,7 @@ posthog==3.7.0
 prompt_toolkit==3.0.48
 propcache==0.5.4
 proto-plus==1.25.0
-protobuf==5.28.3
+protobuf==5.29.6
 psutil==5.9.8
 ptyprocess==0.7.0
 pure_eval==0.2.3
